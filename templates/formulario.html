@@ -1,0 +1,38 @@
+{%load staticfiles %}{% load i18n %}{% load static %}
+ <html lang="Es">
+                 <HEAD>
+                        <meta charset="utf-8">
+                        <title>Login</title>
+                        <link href="//fonts.googleapis.com/css?family=Josefin+Sans|Montez|Pathway+Gothic+One" rel="stylesheet">
+                        <link rel="stylesheet" href ="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+                        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+                        <link REL="stylesheet" HREF="{% static 'css/fonts.css' %}">
+
+                </HEAD>
+
+
+
+
+            <body>
+                <div class="contenedor">
+
+                        <header>
+                             <h1 class="title">Salimos</h1>
+                             <a href="#">Registrate</a>
+                        </header>
+                    <div class="login">
+                        <article class="fondo">
+                         <img src="{% static 'img/smile.jpg' %}" alt="User">
+                             <h3>Inicio de Sesión</h3>
+                                <form class="" action="ingreso_form.html" method="post">
+                                        <span class="icon-user"></span><input class="inp" type="text" name="user" value=""><br>
+                                        <span class="icon-key"></span><input class="inp" type="password" name="pass" value=""><br>
+                                        <a href="" class="he">He olvidado mi contraseña</a>
+                                        <input class="boton" type="submit" name="inicio" value="Iniciar Sesión">
+                                </form>
+                         </article>
+                    </div>
+                 </div>
+            </body>
+ </html>

@@ -1,0 +1,16 @@
+{{% load menu %}
+<html>
+    <body>
+		<ul>
+			<li>
+	        	<a class="{% active 'prepare trip' %}" href="{% url 'prepare trip' %}">Planear viaje</a>
+			</li>
+			<li>
+	        	<a class="{% active 'search' %}" href="{% url 'search' %}">Buscar viajeros</a>
+			</li>
+			<li>
+	        	<a class="{% active 'blog' %}" href="{% url 'blog' %}">Blog</a>
+			</li>
+		</ul>
+    </body>
+</html>

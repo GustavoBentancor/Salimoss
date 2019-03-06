@@ -1,0 +1,45 @@
+{% load staticfiles %}{% load i18n %}
+<!DOCTYPE html>
+<html lang="es" >
+    <head>
+                 <meta charset="UTF-8">
+                  <title>Step by step form</title>
+                         <link rel="stylesheet" href ="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+                            <!--link href=-->
+  
+                    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+        <body>
+
+                        <div ng-app="coolform" class="wrapper">
+                          <div cool-form>
+                            <div class="q-title">Unite a Salimos!</div>
+                            <div ng-repeat="q in questions" class="question">
+                                <label>
+                                    <span class="q-text">
+                                        {{q.question}}
+                                            <span class="q-answer">
+                                                {{q.answer}}
+                                            </span>
+                                    </span>
+                                    <input type="text" id="q{$index}" ng-model="q.answer">
+                                         <span class="q-back" ng-click="open($index)"><</span>
+                                 </label>
+                                        <span class="q-next" ng-click="open($index+1)">></span>
+                             </div>
+                                <div class="q-after">
+                                    <hr>
+                                        <div class="q-confirm-text">Esta informacion es correcta?</div>
+                                         <div class="q-confirm-button">Continuar</div>
+                                </div>
+                            </div>
+                                 <div ng-show="activequestion > -1 && activequestion < questions.length"
+                                    style="text-align: center;">{activequestion+1} / {{questions.length}}</div>
+                                  </div>
+                        <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+                        <script  src="{% static 'js/index.js' %}"></script>
+        </body>
+
+</html>

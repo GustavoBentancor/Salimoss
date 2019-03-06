@@ -1,0 +1,137 @@
+{% load static %}{% load i18n %}{% load staticfiles %}   {% load hitcount_tags %}{% load menu %}
+<!DOCTYPE html>
+<html lang="Es">
+          <head>
+
+                     
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <link rel="stylesheet" href ="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+                         <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+                         <link rel="stylesheet" href="{% static 'css/principales.css' %}">
+                         <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+                         <link rel="stylesheet" href="{% static 'css/boton.css' %}">
+                         <link rel="stylesheet" href="{% static 'css/botones.css' %}">
+                         <link rel="stylesheet" href="{% static 'css/hola.css' %}">
+                         <link rel="script" href="{% static 'js/enlaces.js' %} }}">
+                <title>
+                    www.Salimos.com
+                </title>
+          </head>
+     <body>
+
+                                 <div class="menu-title_2nd">
+                                    <a href="{% url 'index' %}">Home</a>.
+                                    <a id="registrar" href="{% url 'llama' %}">{% trans "Registrarse" %}</a>
+                                    <a id="iniciars" href="{% url 'formu' %}">{% trans "Iniciar session" %}</a>
+                                    <a href="{% url 'Festi' %}">{% trans "Cine" %}</a>
+                                    <a href="{% url 'hitcount:hit_ajax' %}">{% trans "Festivales" %}</a>
+                                    <a href="{% url 'hitcount:hit_ajax' %}">{% trans "Criollas" %}</a>
+                                     <a href="{% url 'hitcount:hit_ajax' %}">{% trans "Teatros" %}</a>
+                                     <a href="{% url 'Lugaresss' %}">{% trans "Lugares" %}</a>
+                                 </div>
+
+
+            <h1 id="salimoscom">Salimos</h1>
+
+                <!!p id="textouno">
+                     <div id="video">
+                             <iframe width="400" height="215" src="https://www.youtube.com/embed/5FBeaZB07B0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </a>
+            {% block navbar%}
+            <ul class= "hList">
+                <li>
+                  <a href= "#" class="active menu">
+                      <h2 class="menu-title">Mi evento</h2>
+                         <ul class="menu-dropdown">
+                            <li>En familia</li>
+                            <li>Con amigos</li>
+                            <li>Para niños</li>
+                            <li>Paseos</li>
+                            <li>Lugares Turisticos</li>
+                         </ul>
+                   </a>
+                </li>
+                  <li>
+                      <a href="#" class="menu">
+                            <h2 class="menu-title menu-title_2nd">Categorias</h2>
+                              <ul class="menu-dropdown">
+                                <li>Festivales</li>
+                                <li>Criollas</li>
+                                <li>Gastronomia</li>
+                                <li>Cine</li>
+                                <li>Toques</li>
+                                <li>Teatros</li>
+                                <li>Boliches</li>
+                                <li>Lugares </li>
+                             </ul>
+                       </a>
+                  </li>
+                    <li>
+                        <a href="#click" class="menu">
+                          <h2 class="menu-title menu-title_3rd">Departamentos</h2>
+                            <ul class="menu-dropdown">
+                              <li>Artigas</li>
+                              <li>Salto</li>
+                              <li>Montevideo</li>
+                              <li>Paysandu</li>
+                              <li>Lavalleja</li>
+                              <li>Canelones</li>
+                              <li>Florida</li>
+                               <li>San Jose</li>
+                               <li>Tacuarembo</li>
+                               <li>Rivera</li>
+                               <li>Flores</li>
+                               <li>Rocha</li>
+                               <li>Maldonado</li>
+                               <li>Rio Negro</li>
+                               <li>Soriano</li>
+                               <li>Colonia</li>
+                               <li>Durazno</li>
+                               <li>Cerro Largo</li>
+                               <li>Treinta y Tres</li>
+                            </ul>
+                        </a>
+                  </li>
+            </ul>
+            	{% endblock %}
+
+                
+                 <ul class="acordeon">
+                    <li>
+                     <h4>Guns ¨N Roses</h4>
+                    <a href="https://tedelmecanico.com/2009/12/20/      guns-n-roses-y-janes-addiction-en-montevideo.html"><img src={% static 'img/back.jpg' %}/></a>
+                    </li>
+                    <li>
+                        <h4>Encuentro Motos</h4>
+                         <a href="http://motociclistasuruguayos.com/evento/rodada-juntada-los-antiguos-vespa-club/?instance_id=484"><img src={% static 'img/moto.png' %} /></a>
+                    </li>
+                    <li>
+                             <h4>Ed Sheeran</h4>
+                            <a href="https://www.elobservador.com.uy/nota/comenzo-el-recital-ed-sheeran-ya-canta-en-el-centenario-201922021300"><img src={% static 'img/imagenuno.jpeg' %} /></a>
+                    </li>
+                    <li>
+                             <h4>Festival de San Gregorio del Polanco</h4>
+                            <a href="https://www.calendario-365.es/dias-festivos/carnaval.html"><img src={% static 'img/carnaval.jpg' %}/></a>
+                    </li>
+                    <li>
+                             <h4>Hipicos</h4>
+                            <a href="http://hipica.maronas.com.uy/"><img src="{% static 'img/caballos.jpg' %}" /></a>
+                    </li>
+                    <li>
+                             <h4>Donde comer"</h4>
+                            <a href="http://www.donpeperone.com.uy/sitio/"><img src="{% static 'img/comida.jpg' %}" /></a>
+                    </li>
+                 </ul>
+
+                     <div id="fb-root"></div>
+                    <script async defer src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.2"></script>
+                     <div class="fb-like" data-href="https://www.facebook.com/Salimos-247878679479017/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FSalimos-247878679479017%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+
+     </body>
+
+
+
+</html>

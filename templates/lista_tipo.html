@@ -1,0 +1,12 @@
+{% extends "Iniciosalimos.html" %}
+
+{% block contenido %}
+
+   <h1>Tipo Almacen</h1>
+   <ul>
+      {% for lista in lista_tipo %}
+        <li>{{ lista.descripcion }} </li>
+      {% endfor %}
+   </ul>
+
+{% endblock %}

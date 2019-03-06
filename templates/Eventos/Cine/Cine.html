@@ -1,0 +1,21 @@
+
+<body>
+
+      <table>
+             <thead>
+               <tbody>
+      {% if Cine %}
+          {% for cine in cine %}
+          
+          {% endfor %}
+          
+      
+      {% endif %}
+                  <td>{{ cine.id }}</td>
+                  <td>{{ cine.nombre }}</td>
+               </tbody>
+             </thead>
+      </table>
+      {% csrf_token %}
+
+</body>
